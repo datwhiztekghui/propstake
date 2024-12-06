@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jaro:opsz@6..72&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
   margin: 0;
@@ -10,16 +11,18 @@
   --clr-white: #FFFFFF;
   --clr-black: #202020;
   --clr-grey: #707070;
-  --clr-blue: #6C63FF;
+  --clr-blue: #14343dd2;
   --clr-blue-2: #4c46b6;
   --clr-green: #4fb646;
+  --clr-logo-2: #81B8B9;
 }
 
 body {
   margin: 0;
-  font-family: "Open Sans";
+  font-family: "Georgia";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #707070;
 }
 
 /* ------------------------------------------------------ */
@@ -33,10 +36,13 @@ nav {
 
 .nav__brand {
   display: flex;
+  font-family: "Jaro",  Times, serif;
+  font-optical-sizing: auto;
   justify-content: center;
   align-items: center;
-
   padding: 20px;
+  color: var(--clr-black);
+  text-shadow:#995b37;
 }
 
 .nav__brand img {
@@ -45,9 +51,10 @@ nav {
 }
 
 .nav__brand h1 {
-  color: var(--clr-blue);
+  color: var(--clr-yellow);
   font-size: 2.5em;
   font-weight: 800;
+
 }
 
 .nav__links {
@@ -80,7 +87,7 @@ nav {
   color: var(--clr-white);
 
   border: none;
-  border-radius: 4px;
+  border-radius: 12px;
 
   font-family: "Open Sans";
   font-size: 1.10em;
@@ -91,7 +98,30 @@ nav {
 }
 
 .nav__connect:hover {
-  background-color: var(--clr-blue-2);
+  background-color: var(--clr-logo-2);
+}
+
+.nav__disconnect {
+  width: 175px;
+  height: 50px;
+  margin: 0 auto;
+
+  background-color: var(--clr-yellow);
+  color: var(--clr-red);
+
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Open Sans";
+  font-size: 1.10em;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: all 250ms ease;
+}
+
+.nav__disconnect:hover {
+  background-color: var(--clr-red-2);
 }
 
 /* ------------------------------------------------------ */
@@ -129,7 +159,7 @@ header {
   transform: translate(-50%, -50%);
 }
 
-.header__search::placeholder {
+.heade r__search::placeholder {
   font-family: "Open Sans";
   font-size: 1.25em;
   font-weight: 600;
